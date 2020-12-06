@@ -6,8 +6,25 @@ import java.util.Objects;
 public class Game {
 
     List<Player> players;
-    List<SimplePart> parties;
+    List<Part> parties;
+    int winner;
 
+    public Game() {
+    }
+
+
+    public Game(List<Player> players, int winner) {
+        this.players = players;
+        this.winner = winner;
+    }
+
+    public int getWinner() {
+        return winner;
+    }
+
+    public void setWinner(int winner) {
+        this.winner = winner;
+    }
 
     public void setPlayers(List<Player> players) {
 
@@ -18,11 +35,11 @@ public class Game {
         return players;
     }
 
-    public List<SimplePart> getParties() {
+    public List<Part> getParties() {
         return parties;
     }
 
-    public void setParties(List<SimplePart> parties) {
+    public void setParties(List<Part> parties) {
         this.parties = parties;
     }
 
